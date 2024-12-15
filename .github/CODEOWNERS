@@ -1,0 +1,12 @@
+# These owners will be the default owners for everything in the repo
+* @panaho82
+
+# Frontend specific files
+/frontend/ @panaho82
+
+# Backend specific files
+/backend/ @panaho82
+
+# Configuration files
+*.yml @panaho82
+*.json @panaho82

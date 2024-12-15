@@ -1,66 +1,88 @@
-# Application de Gestion de Location de Voitures
+# Car Rental Management System
 
-Une application web fullstack pour la gestion efficace des réservations de location de voitures.
+A modern car rental management system built with React and Supabase.
 
-## Fonctionnalités Principales
+![CI/CD](https://github.com/panaho82/car-rental-management/workflows/Frontend%20CI%2FCD/badge.svg)
 
-- Dashboard interactif avec statistiques en temps réel
-- Gestion complète des réservations
-- Gestion de la flotte de véhicules
-- Gestion des clients
-- Calendrier interactif personnalisé
-- Système d'état des lieux (check-in/check-out)
-- Interface responsive et personnalisable
+## Features
 
-## Stack Technique
+- 🚗 Modern vehicle management interface
+- 📊 Real-time analytics dashboard
+- 📱 Responsive design
+- 🔒 Secure authentication with Supabase
+- 📅 Advanced booking system
+- 📈 Performance monitoring
+- 🛠️ Maintenance tracking
 
-- **Frontend:** React.js
-- **Backend:** Node.js avec Express
-- **Base de données:** Supabase
-- **Authentication:** Supabase Auth
+## Tech Stack
 
-## Structure du Projet
+- Frontend:
+  - React with TypeScript
+  - Vite
+  - Material-UI
+  - Recharts for data visualization
+  - Supabase Client
 
-```
-car-rental-management/
-├── frontend/           # Application React
-│   ├── src/           # Code source React
-│   └── public/        # Fichiers statiques
-└── backend/           # Serveur Node.js/Express
-    └── src/           # Code source du serveur
-```
+- Backend:
+  - Node.js
+  - Supabase
+  - PostgreSQL
 
-## Prérequis
+## Getting Started
 
-- Node.js (v18 ou supérieur)
-- npm ou yarn
-- Compte Supabase
+### Prerequisites
 
-## Installation
+- Node.js 18+
+- npm
+- Supabase account
 
-1. Cloner le repository
-2. Installer les dépendances frontend :
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/panaho82/car-rental-management.git
+   cd car-rental-management
+   ```
+
+2. Install frontend dependencies:
    ```bash
    cd frontend
    npm install
    ```
-3. Installer les dépendances backend :
+
+3. Install backend dependencies:
    ```bash
-   cd backend
+   cd ../backend
    npm install
    ```
-4. Configurer les variables d'environnement
 
-## Démarrage
+4. Set up environment variables:
+   - Copy `.env.example` to `.env` in both frontend and backend directories
+   - Fill in your Supabase credentials
 
-1. Démarrer le backend :
+5. Start the development servers:
    ```bash
+   # Frontend
+   cd frontend
+   npm run dev
+
+   # Backend
    cd backend
    npm run dev
    ```
 
-2. Démarrer le frontend :
-   ```bash
-   cd frontend
-   npm start
-   ```
+## Deployment
+
+The application is automatically deployed to Vercel when changes are pushed to the main branch.
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/AmazingFeature`
+3. Commit your changes: `git commit -m 'Add some AmazingFeature'`
+4. Push to the branch: `git push origin feature/AmazingFeature`
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

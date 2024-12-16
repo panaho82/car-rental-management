@@ -12,9 +12,9 @@ import { Add as AddIcon } from '@mui/icons-material';
 import { VehicleList } from '../components/vehicles/VehicleList';
 import { VehicleForm } from '../components/vehicles/VehicleForm';
 import { vehicleService } from '../services/vehicleService';
-import { Vehicle } from '../../../backend/src/types/vehicle';
+import { Vehicle } from '../types/vehicle';
 
-export const VehiclesPage: React.FC = () => {
+export default function VehiclesPage() {
   const [openForm, setOpenForm] = React.useState(false);
   const [selectedVehicle, setSelectedVehicle] = React.useState<Vehicle | undefined>();
   const [alert, setAlert] = React.useState<{ message: string; type: 'success' | 'error' } | null>(

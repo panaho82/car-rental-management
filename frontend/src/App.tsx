@@ -9,9 +9,11 @@ import VehicleList from './pages/VehicleList';
 import VehicleDetails from './pages/VehicleDetails';
 import Reservations from './pages/Reservations';
 import Profile from './pages/Profile';
-import Admin from './pages/Admin';
 import Reports from './pages/Reports';
-import Typography from '@mui/material/Typography';
+import Dashboard from './pages/Dashboard';
+import Clients from './pages/Clients';
+import CheckVehicle from './pages/CheckVehicle';
+import Settings from './pages/Settings';
 
 const theme = createTheme({
   palette: {
@@ -32,17 +34,17 @@ function App() {
         <LocalizationProvider dateAdapter={AdapterDateFns}>
           <CssBaseline />
           <Layout>
-            <Typography variant="h4" component="h1" gutterBottom>
-              Car Rental Management System - Test Deploy
-            </Typography>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/vehicles" element={<VehicleList />} />
               <Route path="/vehicles/:id" element={<VehicleDetails />} />
               <Route path="/reservations" element={<Reservations />} />
+              <Route path="/clients" element={<Clients />} />
+              <Route path="/check-vehicle" element={<CheckVehicle />} />
               <Route path="/reports" element={<Reports />} />
+              <Route path="/settings" element={<Settings />} />
               <Route path="/profile" element={<Profile />} />
-              <Route path="/admin/*" element={<Admin />} />
             </Routes>
           </Layout>
         </LocalizationProvider>

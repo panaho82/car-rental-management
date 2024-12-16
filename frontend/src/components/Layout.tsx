@@ -12,6 +12,7 @@ import {
   Toolbar,
   Typography,
   Button,
+  Divider,
 } from '@mui/material';
 import {
   Menu as MenuIcon,
@@ -20,6 +21,10 @@ import {
   Person,
   Dashboard,
   Assessment,
+  People,
+  CarRepair,
+  Settings as SettingsIcon,
+  Home as HomeIcon,
 } from '@mui/icons-material';
 import { useState } from 'react';
 
@@ -37,11 +42,14 @@ export default function Layout({ children }: LayoutProps) {
   };
 
   const menuItems = [
-    { text: 'Vehicles', icon: <DirectionsCar />, path: '/vehicles' },
-    { text: 'Reservations', icon: <CalendarToday />, path: '/reservations' },
-    { text: 'Reports', icon: <Assessment />, path: '/reports' },
-    { text: 'Profile', icon: <Person />, path: '/profile' },
-    { text: 'Admin', icon: <Dashboard />, path: '/admin' },
+    { text: 'Accueil', icon: <HomeIcon />, path: '/' },
+    { text: 'Dashboard', icon: <Dashboard />, path: '/dashboard' },
+    { text: 'Véhicules', icon: <DirectionsCar />, path: '/vehicles' },
+    { text: 'Réservations', icon: <CalendarToday />, path: '/reservations' },
+    { text: 'Clients', icon: <People />, path: '/clients' },
+    { text: 'Check Véhicule', icon: <CarRepair />, path: '/check-vehicle' },
+    { text: 'Rapports', icon: <Assessment />, path: '/reports' },
+    { text: 'Paramètres', icon: <SettingsIcon />, path: '/settings' },
   ];
 
   const drawer = (
@@ -54,6 +62,7 @@ export default function Layout({ children }: LayoutProps) {
             key={item.text}
             component={RouterLink}
             to={item.path}
+            onClick={() => setMobileOpen(false)}
           >
             <ListItemIcon>{item.icon}</ListItemIcon>
             <ListItemText primary={item.text} />
@@ -86,7 +95,8 @@ export default function Layout({ children }: LayoutProps) {
             Car Rental Management
           </Typography>
           <Button color="inherit" component={RouterLink} to="/profile">
-            Login
+            <Person sx={{ mr: 1 }} />
+            Profile
           </Button>
         </Toolbar>
       </AppBar>
@@ -99,7 +109,7 @@ export default function Layout({ children }: LayoutProps) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true,
+            keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
@@ -131,9 +141,9 @@ export default function Layout({ children }: LayoutProps) {
           flexGrow: 1,
           p: 3,
           width: { sm: `calc(100% - ${drawerWidth}px)` },
+          mt: 8,
         }}
       >
-        <Toolbar />
         {children}
       </Box>
     </Box>

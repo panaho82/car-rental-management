@@ -27,10 +27,10 @@ const theme = createTheme({
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <LocalizationProvider dateAdapter={AdapterDateFns}>
-        <CssBaseline />
-        <Router>
+    <Router basename="/car-rental-management">
+      <ThemeProvider theme={theme}>
+        <LocalizationProvider dateAdapter={AdapterDateFns}>
+          <CssBaseline />
           <Layout>
             <Typography variant="h4" component="h1" gutterBottom>
               Car Rental Management System - Test Deploy
@@ -45,9 +45,9 @@ function App() {
               <Route path="/admin/*" element={<Admin />} />
             </Routes>
           </Layout>
-        </Router>
-      </LocalizationProvider>
-    </ThemeProvider>
+        </LocalizationProvider>
+      </ThemeProvider>
+    </Router>
   );
 }
 

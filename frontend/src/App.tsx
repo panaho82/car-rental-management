@@ -11,6 +11,7 @@ import Reservations from './pages/Reservations';
 import Profile from './pages/Profile';
 import Admin from './pages/Admin';
 import Reports from './pages/Reports';
+import Typography from '@mui/material/Typography';
 
 const theme = createTheme({
   palette: {
@@ -31,6 +32,9 @@ function App() {
         <CssBaseline />
         <Router>
           <Layout>
+            <Typography variant="h4" component="h1" gutterBottom>
+              Car Rental Management System - Test Deploy
+            </Typography>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/vehicles" element={<VehicleList />} />

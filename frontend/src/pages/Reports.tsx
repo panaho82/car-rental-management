@@ -55,7 +55,7 @@ function TabPanel(props: TabPanelProps) {
   );
 }
 
-export const Reports: React.FC = () => {
+export default function Reports() {
   const [tabValue, setTabValue] = useState(0);
   const [startDate, setStartDate] = useState<Date | null>(null);
   const [endDate, setEndDate] = useState<Date | null>(null);

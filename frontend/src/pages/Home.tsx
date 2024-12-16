@@ -1,6 +1,6 @@
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import carImage from '../assets/car-hero.jpg';
+import carHeroImage from '@/assets/car-hero.jpg';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -50,7 +50,7 @@ export default function Home() {
           <Grid item xs={12} md={6}>
             <Box
               component="img"
-              src={carImage}
+              src={carHeroImage}
               alt="Luxury car"
               sx={{
                 width: '100%',

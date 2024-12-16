@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Vehicle, VehicleStatus } from '../../../backend/src/types/vehicle';
+import { Vehicle, VehicleStatus } from '../types/vehicle';
 
 const API_URL = 'http://localhost:3000/api';
 
